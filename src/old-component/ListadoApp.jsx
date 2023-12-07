@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { AgregarTarea } from "./components/AgregarTarea";
+import { AgregarTarea } from "../components/AgregarTarea";
 
 const Item = ({ item }) => {
   return <li> {item}</li>;

@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom/client";
 
 import "./styles.css";
-import { ListadoApp } from "./ListadoApp";
+import { UserApp } from "./UserApp";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <ListadoApp></ListadoApp>
+    <UserApp></UserApp>
   </>
 );
