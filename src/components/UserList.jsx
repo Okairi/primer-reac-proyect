@@ -1,22 +1,9 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { useFetchUser } from "../hooks/useFetchData";
 
 export const UserList = ({ endpoint }) => {
-  const [user, setuser] = useState([]);
-  console.log(endpoint);
-
-  useEffect(() => {
-    const getUser = async () => {
-      const response = await fetch(
-        `https://jsonplaceholder.typicode.com/${endpoint}`
-      );
-      const json = await response.json();
-
-      setuser(json);
-    };
-    getUser();
-  }, [endpoint]);
-
+  const { user, isLoading } = useFetchUser();
   return (
     <>
       <ul>
